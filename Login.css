@@ -1,0 +1,213 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .login-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .login-box:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .login-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .welcome-text {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .subtext {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    background-color: #fff;
+  }
+  
+  .input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: width 0.4s ease;
+  }
+  
+  .input-group.focused .input-highlight {
+    width: 100%;
+  }
+  
+  .input-group.focused label {
+    color: #667eea;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .remember-me {
+    display: flex;
+    align-items: center;
+  }
+  
+  .remember-me input {
+    margin-right: 0.5rem;
+  }
+  
+  .forgot-password {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .forgot-password:hover {
+    color: #764ba2;
+    text-decoration: underline;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .login-button:hover {
+    background: linear-gradient(90deg, #5a6fd1, #6a4290);
+    transform: translateY(-2px);
+  }
+  
+  .login-button:active {
+    transform: translateY(0);
+  }
+  
+  .login-button.submitting {
+    pointer-events: none;
+    background: linear-gradient(90deg, #5a6fd1, #6a4290);
+  }
+  
+  .spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  .signup-link {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .signup-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .signup-link a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translateX(-1px);
+    }
+    
+    20%, 80% {
+      transform: translateX(2px);
+    }
+    
+    30%, 50%, 70% {
+      transform: translateX(-4px);
+    }
+    
+    40%, 60% {
+      transform: translateX(4px);
+    }
+  }
